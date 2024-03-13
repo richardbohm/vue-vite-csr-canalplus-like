@@ -1,5 +1,6 @@
 export interface Static {
-  image: Image
+  image: Image,
+  fetchUrl: string
 }
 
 export interface Image {
@@ -30,5 +31,6 @@ export const data: Static = {
       landscape: 'la',
       portrait: 'po'
     }
-  }
+  },
+  fetchUrl: 'https://asstatic.solocoo.tv/v1/showcase/Home?app=as'
 }

@@ -8,6 +8,7 @@
   import SectionAustria from "./components/SectionAustria.vue";
   import SectionAction from "./components/SectionAction.vue";
   import SectionCrime from "./components/SectionCrime.vue";
+  import {data} from "./utils/static.ts";
 
   const posts = ref<Root>()
 
@@ -23,7 +24,7 @@
   })
 
   async function getData() {
-    posts.value = await fetch(`https://asstatic.solocoo.tv/v1/showcase/Home?app=as`).then(toJson).then(transform);
+    posts.value = await fetch(data.fetchUrl).then(toJson).then(transform);
   }
 
   getData();
