@@ -9,10 +9,10 @@ export const transform = (root: Root) => {
 
   root.showcase.forEach((showcase, index) => {
     if (index === 0) {
-      showcase.imageType = 'la';
+      showcase.imageType = data.image.type.landscape;
     }
     if (index === 4 || index === 5) {
-      showcase.imageType = 'la';
+      showcase.imageType = data.image.type.landscape;
     }
     const imageType = showcase.imageType
     showcase.assets.forEach(asset => {
